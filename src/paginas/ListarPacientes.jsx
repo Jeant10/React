@@ -29,6 +29,29 @@ const ListarPacientes = () =>
 
   }, [])
 
+
+  const handleDelete = async (id) =>
+  { 
+      try 
+        {
+          const confirmar = confirm("Vas a aliminar un paciente")
+          if(confirmar)
+          {
+              const url = `http://localhost:4000/pacientes/${id}`
+              const peticion = await fetch(url,{
+                  method:'DELETE',
+              })
+              const nuevosPacientes = pacientes.filter(paciente => paciente.id !== id)
+              setPacientes(nuevosPacientes)
+          }
+        }
+        catch(error)
+        {
+          console.log(error);
+        }
+  }
+
+
   return (
 
     <div>
@@ -60,11 +83,12 @@ const ListarPacientes = () =>
                         <td className='p-3 '>{paciente.sintomas}</td>
                         <td className='p-3'>
 
-                          <button type='button' className='bg-sky-800 block w-full text-white p-2 uppercase font-bold text-xs rounded-xl' onClick={() => navigate(`/pacientes/detalle/${paciente.id}`)}>Visualizar</button>
+                        <button type='button' className='bg-sky-800 block w-full text-white p-2 uppercase font-bold text-xs rounded-xl' onClick={() => navigate(`/pacientes/detalle/${paciente.id}`)}>Visualizar</button>
 
-                          <button type='button' className='bg-cyan-900 block w-full text-white p-2 uppercase font-bold text-xs mt-2 mb-2 rounded-xl'>Editar</button>
-                          
-                          <button type='button' className='bg-red-800 block w-full text-white p-2 uppercase font-bold text-xs rounded-xl'>Eliminar</button>
+                        <button type='button' className='bg-cyan-900 block w-full text-white p-2 uppercase font-bold text-xs mt-2 mb-2 rounded-xl' onClick={() => navigate(`/pacientes/editar/${paciente.id}`)}>Editar</button>
+                        
+                        <button type='button' className='bg-red-800 block w-full text-white p-2 uppercase font-bold text-xs rounded-xl'onClick={()=>{handleDelete(paciente.id)}}>Eliminar</button>
+
                         </td>
                     </tr>
                   ))

@@ -1,32 +1,48 @@
 {
-    "posts": [{ "id": 1, "title": "json-server", "author": "typicode" }],
-    "comments": [{ "id": 1, "body": "some comment", "postId": 1 }],
-    "profile": { "name": "typicode" },
-    "pacientes":[
-
-      {
-        "id":1,
-        "nombre":"Manchas",
-        "propietario":"Byron Loarte",
-        "email":"bytosh20@hotmail.com",
-        "telefono":"0995644186",
-        "fecha":"24-04-2022",
-        "sintomas":"Dolor de pata"
-      },
-      
-      {
-        "id":2,
-        "nombre":"Bruno",
-        "propietario":"Juan Peréz",
-        "email":"juan@hotmail.com",
-        "telefono":"0995644186",
-        "fecha":"20-03-2022",
-        "sintomas":"Dolor de orejas"
-      }
-
-    ]
-
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "pacientes": [
+    {
+      "id": 1,
+      "nombre": "Manchas",
+      "propietario": "Byron Loarte",
+      "email": "bytosh20@hotmail.com",
+      "telefono": "0995644186",
+      "fecha": "24-04-2022",
+      "sintomas": "Dolor de pata"
+    },
+    {
+      "id": 2,
+      "nombre": "Bruno",
+      "propietario": "Juan Peréz",
+      "email": "juan@hotmail.com",
+      "telefono": "0995644186",
+      "fecha": "20-03-2022",
+      "sintomas": "Dolor de orejas"
+    },
+    {
+      "nombre": "Max",
+      "propietario": "Jean",
+      "email": "jeantituana@gmail.com",
+      "fecha": "2022-07-22",
+      "telefono": "0987434354",
+      "sintomas": "Fiebre",
+      "id": 3
+    }
+  ]
 }
-  
-  
-  
