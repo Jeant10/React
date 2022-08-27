@@ -10,10 +10,6 @@ import { useState, useEffect } from "react";
 
 // Key public: 2bbf33aabe0d17905193dbfafbd81070
 
-// Key privada: 9f9a4a5ad3c9fc054a5187bebf4dc794cf0f960d
-
-// 19f9a4a5ad3c9fc054a5187bebf4dc794cf0f960d2bbf33aabe0d17905193dbfafbd81070
-
 // md5 generator: https://www.md5hashgenerator.com/
 
 // hash: eb8283ac5b33d7b25e0600a08ef59062
@@ -26,7 +22,7 @@ const Marvel = () => {
 
     useEffect(() => {
 
-        axios.get("http://gateway.marvel.com/v1/public/characters?&ts=1&apikey=2bbf33aabe0d17905193dbfafbd81070&hash=eb8283ac5b33d7b25e0600a08ef59062").then(res=>{
+        axios.get("https://gateway.marvel.com/v1/public/characters?&ts=1&apikey=2bbf33aabe0d17905193dbfafbd81070&hash=eb8283ac5b33d7b25e0600a08ef59062").then(res=>{
             setPersonajes(res.data.data.results)
             console.log(res.data.data.results)
         }).catch(console.error())
