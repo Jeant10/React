@@ -8,7 +8,7 @@ const MensajesError = () =>
   return (
   <>
       <div className="container mt-4">
-        <h1 className='mb-4 text-2xl'>Mnesajes de Error App 🐱👤🐺</h1>
+        <h1 className='mb-4 text-2xl'>Mensajes de Error App 🐱👤🐺</h1>
         <hr />
           <div className="text-center">
           <h2 className="mt-4 mb-4">El valor del mensaje es: {mensaje}</h2>
